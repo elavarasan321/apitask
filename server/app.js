@@ -2,11 +2,11 @@ import express from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
-import indexRouter from "./routes/index";
+import indexRouter from "./routes/items/index";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
-import usersRouter from "./routes/users";
+import usersRouter from "./routes/items/index";
 import { dirname } from "path";
 dotenv.config();
 

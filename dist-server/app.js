@@ -15,13 +15,11 @@ var _cookieParser = _interopRequireDefault(require("cookie-parser"));
 
 var _morgan = _interopRequireDefault(require("morgan"));
 
-var _index = _interopRequireDefault(require("./routes/index"));
+var _index = _interopRequireDefault(require("./routes/items/index"));
 
 var _mongoose = _interopRequireDefault(require("mongoose"));
 
 var _dotenv = _interopRequireDefault(require("dotenv"));
-
-var _users = _interopRequireDefault(require("./routes/users"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -48,6 +46,6 @@ app.use(_express["default"].urlencoded({
 app.use((0, _cookieParser["default"])());
 app.use(_express["default"]["static"](_path["default"].join(__dirname, '../public')));
 app.use('/', _index["default"]);
-app.use('/users', _users["default"]);
+app.use('/users', _index["default"]);
 var _default = app;
 exports["default"] = _default;
